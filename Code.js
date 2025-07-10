@@ -3,6 +3,9 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
+const cors = require("cors");
+app.use(cors());
+
 app.get("/sum", function (req, res) {
   const a = parseInt(req.query.a);
   const b = parseInt(req.query.b);
